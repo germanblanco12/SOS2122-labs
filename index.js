@@ -1,7 +1,7 @@
 
 const express = require("express");
 const bodyParser = require("body-parser");
-const coll = require("cool-ascii-faces");
+const cool = require("cool-ascii-faces");
 
 const app = express();
 
