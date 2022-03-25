@@ -1,6 +1,7 @@
 
 const express = require("express");
 const bodyParser = require("body-parser");
+const coll = require("cool-ascii-faces");
 
 const app = express();
 
@@ -42,6 +43,10 @@ app.get("/caritas",(req,res)=>{
     console.log("Requested / route");
     res.send("<html><body>"+cool()+"</body></html>");
 });
+
+app.get("/api", (req,res)=>{
+    res.send({ result : true })
+})
 
 app.post(BASE_API_URL+"/contacts",(req,res)=>{
     contacts.push(req.body);
