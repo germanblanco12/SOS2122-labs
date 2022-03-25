@@ -1,5 +1,5 @@
 {
-  "name": "l04",
+  "name": "l06",
   "version": "1.0.0",
   "description": "my first module",
   "main": "index.js",
@@ -7,9 +7,10 @@
     "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "gerblaper",
+  "author": "pablofm",
   "license": "ISC",
   "dependencies": {
+    "body-parser": "^1.19.2",
     "cool-ascii-faces": "^1.3.4",
     "express": "^4.17.3"
   }

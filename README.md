@@ -11,4 +11,6 @@ npm install
 npm start
 ```
 
-Done by [Germán]
+Done by [@pafmon](www.us.es)
+
+
