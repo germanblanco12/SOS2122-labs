@@ -2,7 +2,7 @@ const BASE_API_URL = "/api/v1";
 const cool = require("cool-ascii-faces");
 const bodyParser = require("body-parser");
 
-module.exports = (app) =>{
+module.exports = (app, db) =>{
 
     app.use(bodyParser.json());
 
@@ -18,7 +18,11 @@ module.exports = (app) =>{
     ];
     
     app.get(BASE_API_URL+"/contacts",(req,res)=>{
-        res.send(JSON.stringify(contacts,null,2));
+        db.find({}, function(err, contacts){
+            res.send(JSON.stringify(contacts.map((c)=>{
+                return { contact : c.contact};
+            }), null, 2));
+        });
     });
     
     app.get(BASE_API_URL+"/contacts/:name",(req,res)=>{
