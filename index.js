@@ -38,6 +38,11 @@ app.get(BASE_API_URL+"/contacts/:name",(req,res)=>{
     
 });
 
+app.get("/caritas",(req,res)=>{
+    console.log("Requested / route");
+    res.send("<html><body>"+cool()+"</body></html>");
+});
+
 app.post(BASE_API_URL+"/contacts",(req,res)=>{
     contacts.push(req.body);
     res.sendStatus(201, "CREATED");
