@@ -1,7 +1,7 @@
 
 const express = require("express");
 
-const backend= require("./src.back");
+const backend= require("./src/back");
 
 const app = express();
 backend(app);
