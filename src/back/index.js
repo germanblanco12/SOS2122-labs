@@ -1,7 +1,10 @@
 const BASE_API_URL = "/api/v1";
 const cool = require("cool-ascii-faces");
+const bodyParser = require("body-parser");
 
 module.exports = (app) =>{
+
+    app.use(bodyParser.json());
 
     var contacts = [
         {
